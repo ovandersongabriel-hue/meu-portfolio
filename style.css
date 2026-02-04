@@ -38,6 +38,7 @@ body {
     opacity: 0.85;
 }
 
+
 .bento-grid > * {
     background-color: #1e1e1e;
     border: 1px solid #333;
@@ -66,6 +67,7 @@ body {
     grid-row: span 2;
     view-transition-name: card-projeto-1;
 }
+
 
 .contato {
     grid-column: span 2;
@@ -97,6 +99,7 @@ body {
     transform: translateY(-2px);
 }
 
+
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -112,6 +115,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; 
 }
 
 .cookie-banner button {
@@ -126,4 +130,31 @@ body {
 
 .cookie-banner button:hover {
     background-color: #8a6fff;
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 10px;
+    }
+
+    
+    .perfil, 
+    .projeto-1, 
+    .contato {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    
+    .bento-grid h1 {
+        font-size: 2rem; 
+    }
+
+    .perfil {
+        text-align: center;
+        padding: 30px 20px;
+    }
 }
